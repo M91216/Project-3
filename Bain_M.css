@@ -1,0 +1,45 @@
+/* Michael Bain
+ Visual Frameworks
+ 1302
+ project 2
+ css file
+*/
+
+
+h1 {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+    width: 300px;
+    
+
+        
+        
+    
+    
+    
+}
+
+
+a{ 
+ 
+    font-family: Helvetica, sans-serif;
+   
+}
+
+form{
+     
+    
+    
+    
+    
+    
+}
+body{
+     background: #dadcd9;
+    
+    
+}
+
+li{
+   font-family: Helvetica, sans-serif;
+   
+}
