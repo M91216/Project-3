@@ -1,31 +1,92 @@
 /* Michael Bain
  Visual Frameworks
  1302
- project 2
+ project 3
  css file
 */
 
 
-h1 {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
-    width: 300px;
-    
-
-        
-        
-    
-    
-    
-}
-
-
-a{ 
- 
-    font-family: Helvetica, sans-serif;
+legend {
+         background-color: #ffbb20;
+         border: 1px #000 solid;
+         font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, sans-serif;
+}                    
+               
+h1{
+   font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace; 
+   background-color: #fff3f0; 
+   padding-left: 50px;  
+   background-length: 500px;
+   border: 1px #000 solid;
+   font-size: 20px;
+   background-width:300px;
+   margin-left:55px; 
+   box-shadow: 2px 2px 10px #888;  
    
+} 
+
+h2{
+   font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, sans-serif;
+   font-size:20px;
+    
 }
 
-form{
+a[id="clearLink"]{
+                  font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace; 
+                  font-size:11px; 
+}
+a[id= "displayLink"]{
+                     font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
+                     font-size:11px; 
+}                    
+                    
+a[id="addNew"]{
+                     font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
+                     font-size:11px; 
+}                
+
+/*Text Boxes*/
+input[type="text"]{ 
+       
+                   width:300px;
+                   height:20px; 
+                   margin-bottom:5px;                                    
+}
+input[type="email"]{ 
+
+                   width:300px;
+                   height:20px;
+                   margin-bottom:5px;
+}
+input[type="phone"]{ 
+
+                  width:300px;
+                  height:20px;
+                  margin-bottom:5px;
+}
+input[type="date"]{ 
+
+                   width:300px;
+                   height:20px;
+                   margin-bottom:5px;
+}
+input[type="time"]{ 
+
+                   width:300px;
+                   height:20px;
+                   margin-bottom:5px;
+}
+input[type="range"]{ 
+
+                   width:300px;
+                   height:20px;
+                   margin-bottom:5px;
+}
+
+input[type="submit"]{
+                   
+                   background-color: #a1ed6d;
+                   box-shadow: 2px 2px 10px #888;
      
     
     
@@ -34,7 +95,7 @@ form{
     
 }
 body{
-     background: #dadcd9;
+     background-color: #e3e2ed;
     
     
 }

@@ -60,9 +60,9 @@ window.addEventListener("DOMContentLoaded", function(){
                $("displayLink").style.display = "inline";
                $("addNew").style.display = "none";
                $("items").style.display = "none";
-                break;
+               break;
             default:
-                return false;
+               return false;
        }
    }
   
@@ -93,8 +93,10 @@ window.addEventListener("DOMContentLoaded", function(){
           item.yesno          =["Engineer:", engineerValue];
                    
           localStorage.setItem(id, JSON.stringify(item));
-          alert("Contact Saved");          
+          alert("Contact Saved"); 
+                               
    }
+   
    function getData(){
        toggleControls("on");
        if(localStorage.length === 0){
@@ -122,7 +124,7 @@ window.addEventListener("DOMContentLoaded", function(){
                var optSubText = obj[n][0]+" "+obj[n][1];
                makeSubLi.innerHTML = optSubText;
                makeSubList.appendChild(linksLi);
-           }
+          }
            makeItemLinks(localStorage.key(i),linksLi); //create edit and delete buttons each item in local storage
        } 
    }
@@ -145,7 +147,7 @@ window.addEventListener("DOMContentLoaded", function(){
        deleteLink.href = "#";
        deleteLink.key = key;
        var deleteText = "Delete Contact";
-       //deleteLink.addEventListener("click", deleteItem);
+       deleteLink.addEventListener("click", deleteItem);
        deleteLink.innerHTML = deleteText;
        linksLi.appendChild(deleteLink);  
    }
@@ -168,33 +170,36 @@ window.addEventListener("DOMContentLoaded", function(){
 	    $("endtime").value = item.endtime[1];
 	    $("hours").value = item.hours[1];
 	    $("comments").value = item.comments[1];
-	    var radio = document.forms[0].yesno;
-	    for(var i=0; i<radio.length; i++){
-    	   if(radio[i].value == "yes" && item.yesno[1] == "yes"){
-        	   radio[i].setAttribute("checked","checked");
-           }else if(radio[i].value == "no" && item.yesno[1] == "no"){
-               radio[i].setAttribute("checked","checked");
-           }  
+	    var checkbox = document.forms[0].yesno;
+	    for(var i=0; i<checkbox.length; i++){
+    	   if(checkbox[i].value == "yes" && item.yesno[1] == "yes"){
+        	   checkbox[i].setAttribute("checked","checked");
+           }else if(checkbox[i].value == "no" && item.yesno[1] == "no"){
+               checkbox[i].setAttribute("checked","checked");
+           }
 	    
 	    }
-	    var radio =document.forms[0].studioroom;
-        if(radio[i].value == "studioA" && item.studioroom[1] == "studioA"){
+	    var radio = document.forms[0].studioroom
+	    for(var i=0; i<radio.length; i++){   
+            if(radio[i].value == "studioA" && item.studioroom[1] == "studioA"){
             radio[i].setAttribute("checked","checked");
-        }else if(radio[i].value == "studioB" && item.studioroom[1] == "studioB"){
+            }else if(radio[i].value == "studioB" && item.studioroom[1] == "studioB"){
             radio[i].setAttribute("checked","checked");
-        }else if(radio[i].value == "studioC" && item.studioroom[1] == "studioC"){
+            }else if(radio[i].value == "studioC" && item.studioroom[1] == "studioC"){
             radio[i].setAttribute("checked","checked");
-                
+           }
+        }
+             
         //Remove the initial listener from the input "save contact" button.
         submit.removeEventListener("click", storeData);
         //Change submit button value to edit button
         $("submitBooking").value = "Edit Contact";
-        var editSubmit = $("submit");
+        var editSubmit = $("submitBooking");
         //save the key value established in this function as a property of the editSumit event
         //so we can use that value when we save the data we edited.
-        editSubmit.addEventListener("click",validate);
+        editSubmit.addEventListener("click", validate);
         editSubmit.key = this.key;              
-      }              	        	   	        
+                   	        	   	        
     }
     
     function deleteItem(){
